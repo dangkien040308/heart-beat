@@ -1,0 +1,76 @@
+body {
+    position: relative;
+    margin: 0;
+    background: linear-gradient(-45deg,#33CCFF,#FF99FF,	#CCFF99,#FFFF33,white);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+.heart {
+    margin: 100px auto;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    position: absolute;
+    left: 47%;
+    transform: rotate(-45deg);
+    position: relative;
+    animation: heartbeat 1s infinite;
+}
+
+.heart::after ,
+.heart::before {
+    content:"";
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+ 
+}
+.heart::before {
+  top : -25px;
+  left : 0 ;
+}
+
+.heart::after {
+  left : 25px ;
+  top : 0 ;
+}
+
+@keyframes gradient {
+  0% {
+   background-position: 0 50%;
+  }
+  50% {
+   background-position: 100% 50%;
+  } 
+  100% {
+   background-position: 0 50%;
+  }
+}
+@keyframes heartbeat {
+    0% {
+      transform: scale( 1 )    
+      rotate(-45deg)
+    }
+    20% {
+      transform: scale( 1.25 ) 
+      rotate(-45deg)
+    } 
+    40% {
+      transform: scale( 1.5 ) 
+      rotate(-45deg)
+    }
+  }
+
+.love {
+     text-align: center;
+     width: 98%;
+     font-size: 30px;
+     color: 	#3366FF;
+     text-shadow: 0 2px 2px #00CCFF ;
+     font-family: 'Open Sans', sans-serif;
+
+}
